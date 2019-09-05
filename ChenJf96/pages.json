@@ -1,0 +1,50 @@
+{
+	// 	设置页面路径及窗口表现,应用中新增/减少页面,都需要对pages数组进行修改,pages节点的第一项为应用入口页(即首页)
+	"pages": [{
+		"path": "pages/resume/index", //配置页面路径
+		"style": {
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/person/index",
+		"style": {
+			"navigationBarTitleText": "积累"
+		}
+	}],
+	// 	设置默认页面的窗口表现
+	"globalStyle": {
+		"navigationBarBackgroundColor": "rgba(231, 231, 231,.7)", //导航栏背景颜色
+		"navigationBarTextStyle": "white", //导航栏标题颜色及状态栏前景颜色,仅支持 black/white
+		"navigationBarTitleText": "陈嘉福的个人博客", //导航栏标题文字内容
+		"navigationStyle": "default", //导航栏样式,仅支持 default/custom。custom即取消默认的原生导航栏
+		"backgroundColor": "#ffffff", //窗口的背景色(微信小程序)
+		"backgroundTextStyle": "dark", //下拉loading的样式,仅支持dark/light(微信小程序)
+		"enablePullDownRefresh": true, //是否开启下拉刷新
+		"onReachBottomDistance": 50, //页面上拉触底事件触发时距页面底部距离,单位只支持px
+		"backgroundColorTop": "#ffffff", //顶部窗口的背景色(仅iOS平台)
+		"backgroundColorBottom": "#ffffff", //底部窗口的背景色(仅 iOS 平台)
+		"pageOrientation": "#portrait", //屏幕旋转设置,仅支持auto/portrait(微信小程序)
+		"animationType": "pop-in", //窗口显示的动画效果(App)
+		"animationDuration": 300, //窗口显示动画的持续时间(App)
+		"usingComponents": {} //引用小程序组件(微信小程序、App)
+	},
+	// 	设置底部 tab 的表现
+	"tabBar": {
+		"color": "#000000", //tab 上的文字默认颜色
+		"selectedColor": "#2B9939", //tab 上的文字选中时的颜色
+		"backgroundColor": "#FAFAFA", //tab 的背景色
+		"borderStyle": "white", //tabbar 上边框的颜色,仅支持 black/white
+		"position": "bottom", //可选值 bottom、top(top值仅微信小程序支持)
+		"list": [{ //tab 的列表，详见 list 属性说明，最少2个、最多5个 tab
+			"pagePath": "pages/resume/index", //页面路径，必须在 pages 中先定义
+			"text": "简历", //tab 上按钮文字，在 5+APP 和 H5 平台为非必填。例如中间可放一个没有文字的+号图标
+			"iconPath": "static/tabbar/tabbar_resume.png", //图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，当 postion 为 top 时，此参数无效，不支持网络图片，不支持字体图标
+			"selectedIconPath": "static/tabbar/tabbar_resume_active.png" //选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px ，当 postion 为 top 时，此参数无效
+		}, {
+			"pagePath": "pages/person/index",
+			"text": "积累",
+			"iconPath": "static/tabbar/tabbar_technology.png",
+			"selectedIconPath": "static/tabbar/tabbar_technology_active.png"
+		}]
+	}
+}

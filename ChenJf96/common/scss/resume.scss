@@ -1,0 +1,544 @@
+page {
+  width: 100%;
+  // font-size: 14px;
+
+  #resume {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+  }
+}
+
+.resume_header {
+  @extend %flex-center;
+  width: 100%;
+  height: 300px;
+  background: url('~@/static/resume/resume_bg.png') no-repeat left top / 100% 100%;
+
+  view {
+    @extend %flex-center;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 60px;
+    background: rgba(127, 151, 167, 0.6);
+    box-sizing: border-box;
+  }
+}
+
+.resume_intro {
+  @extend %flex-center;
+  width: 100%;
+  padding: 35px 35px 0 35px;
+  color: #022643;
+  box-sizing: border-box;
+
+  .resume_person {
+    @extend %flex-left-center;
+    width: 55%;
+
+    .resume_person_img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 50px 0 0;
+    }
+
+    .resume_person_item {
+      flex: 1;
+
+      .resume_person_title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .resume_person_text {
+        @extend %flex-left-center;
+        font-size: 14px;
+
+        view {
+          margin: 5px 20px 0 0;
+        }
+      }
+    }
+  }
+
+  .resume_about {
+    @extend %flex-left-center;
+    width: 27.5%;
+
+    .resume_about_item {
+      flex: 1;
+
+      .resume_about_title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .resume_about_text {
+        font-size: 14px;
+        margin: 5px 0 0 0;
+      }
+    }
+  }
+
+  .resume_language {
+    @extend %flex-left-center;
+    width: 27.5%;
+
+    .resume_language_item {
+      flex: 1;
+
+      .resume_language_title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .resume_language_text {
+        @extend %flex;
+        flex-wrap: wrap;
+
+        view {
+          font-size: 14px;
+          background: #e4eef6;
+          padding: 3px;
+          margin: 5px 5px 0 0;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+.resume_experience,
+.resume_work,
+.resume_contact {
+  position: relative;
+  font-weight: bold;
+  font-size: 26px;
+  color: #022643;
+  width: 150px;
+  margin: 50px auto;
+  text-align: center;
+
+  .resume_experience_before,
+  .resume_work_before,
+  .resume_contact_before {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 20px;
+    height: 23px;
+  }
+
+  .resume_experience_before {
+    background: url('~@/static/resume/resume_icon1.png') no-repeat left top / 100% 100%;
+  }
+
+  .resume_work_before {
+    background: url('~@/static/resume/resume_icon3.png') no-repeat left top / 100% 100%;
+  }
+
+  .resume_contact_before {
+    background: url('~@/static/resume/resume_icon5.png') no-repeat left top / 100% 100%;
+  }
+
+  .resume_experience_after,
+  .resume_work_after,
+  .resume_contact_after {
+    position: absolute;
+    top: -15px;
+    left: 90px;
+    width: 55px;
+    height: 63px;
+  }
+
+  .resume_experience_after {
+    background: url('~@/static/resume/resume_icon2.png') no-repeat left top / 100% 100%;
+  }
+
+  .resume_work_after {
+    background: url('~@/static/resume/resume_icon4.png') no-repeat left top / 100% 100%;
+  }
+
+  .resume_contact_after {
+    background: url('~@/static/resume/resume_icon6.png') no-repeat left top / 100% 100%;
+  }
+}
+
+.resume_project {
+  @extend %flex;
+  flex-wrap: wrap;
+
+  .resume_project_content {
+    @extend %flex-align-center;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    margin-bottom: 25px;
+
+    .resume_project_item {
+      width: 100%;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      padding: 20px;
+
+      .resume_project_leling {
+        width: 75px;
+        height: 50px;
+      }
+
+      .resume_project_youfen {
+        width: 90px;
+        height: 50px;
+      }
+
+      .resume_project_freeget {
+        width: 50px;
+        height: 50px;
+      }
+
+      .resume_project_pingjiabang {
+        width: 95px;
+        height: 50px;
+      }
+
+      .resume_project_title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #022643;
+      }
+
+      .resume_project_time {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #767e84;
+      }
+
+      .resume_project_text {
+        margin-top: 15px;
+        text-align: initial;
+        font-size: 14px;
+        color: #022643;
+      }
+    }
+
+    .resume_project_demo {
+      width: 77%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background-image: linear-gradient(-130deg, #ffba00 0%, #f7ab1c 100%);
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      font-size: 16px;
+      color: #022643;
+    }
+  }
+
+  .resume_project_m {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.resume_company {
+  @extend %flex;
+
+  .resume_company_maykis {
+    width: 250px;
+    height: 80px;
+    flex: 0 0 auto;
+    margin-right: 30px;
+  }
+
+  .resume_company_content {
+    .resume_company_time {
+      font-size: 14px;
+      color: #022643;
+    }
+
+    .resume_company_title {
+      font-weight: bold;
+      font-size: 16px;
+      color: #022643;
+      margin-bottom: 10px;
+    }
+
+    .resume_company_text {
+      font-size: 14px;
+      color: #022643;
+    }
+  }
+}
+
+.resume_connection {
+  @extend %flex-align-center;
+
+  .resume_connection_icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .resume_connection_title,
+  .resume_connection_text {
+    font-size: 14px;
+    color: #022643;
+  }
+
+  .resume_connection_title {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+}
+
+.resume_share {
+  @extend %flex-center;
+  margin: 10px 0;
+
+  .resume_share_qq,
+  .resume_share_wechat,
+  .resume_share_twitter,
+  .resume_share_facebook {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.resume_qrcode_popup {
+  .resume_qrcode_content {
+    @extend %flex-align-center;
+    .resume_qrcode_text{
+      margin: 0 0 10px 0;
+    }
+    .resume_qrcode_image {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #resume {
+    padding: 7.5px 0 0 0 !important;
+    box-sizing: border-box;
+  }
+
+  .resume_header {
+    height: 112.5px !important;
+
+    view {
+      font-size: 7.5px !important;
+      padding: 1.875px 22.5px !important;
+      box-sizing: border-box;
+    }
+  }
+
+  .resume_intro {
+    padding: 10px 10px 0 10px !important;
+    flex-wrap: wrap;
+
+    .resume_person {
+      width: 100% !important;
+
+      .resume_person_img {
+        width: 37.5px !important;
+        height: 37.5px !important;
+        margin: 0 18.75px 0 0 !important;
+      }
+
+      .resume_person_title {
+        font-size: 6px !important;
+        margin: 3.75px 0 !important;
+      }
+
+      .resume_person_text {
+        font-size: 5.25px !important;
+
+        view {
+          margin: 1.875px 7.5px 0 0 !important;
+        }
+      }
+    }
+
+    .resume_about {
+      width: 52% !important;
+
+      .resume_about_title {
+        font-size: 6px !important;
+        margin: 3.75px 0 !important;
+      }
+
+      .resume_about_text {
+        font-size: 5.25px !important;
+        margin: 1.875px 0 0 0 !important;
+      }
+    }
+
+    .resume_language {
+      width: 48% !important;
+
+      .resume_language_title {
+        font-size: 6px !important;
+        margin: 3.75px 0 !important;
+      }
+
+      .resume_language_text {
+        view {
+          font-size: 5.25px !important;
+          padding: 1.125px !important;
+          margin: 1.875px 1.875px 0 0 !important;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  .resume_experience,
+  .resume_work,
+  .resume_contact {
+    font-size: 9.75px !important;
+    width: 56.25px !important;
+    margin: 18.75px auto !important;
+
+    .resume_experience_before,
+    .resume_work_before,
+    .resume_contact_before {
+      top: -3.75px !important;
+      left: 1.875px !important;
+      width: 7.5px !important;
+      height: 8.625px !important;
+    }
+
+    .resume_experience_after,
+    .resume_work_after,
+    .resume_contact_after {
+      top: -5.625px !important;
+      left: 33.75px !important;
+      width: 20.625px !important;
+      height: 23.625px !important;
+    }
+  }
+
+  .resume_project {
+    flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+  }
+
+  .resume_project_content {
+    width: calc(100% - 20px) !important;
+    margin-bottom: 9.375px !important;
+
+    .resume_project_item {
+      box-shadow: 0 0 3.75px 0 rgba(0, 0, 0, 0.1) !important;
+      padding: 7.5px !important;
+
+      .resume_project_leling {
+        width: 28.125px !important;
+        height: 18.75px !important;
+      }
+
+      .resume_project_youfen {
+        width: 33.75px !important;
+        height: 18.75px !important;
+      }
+
+      .resume_project_freeget {
+        width: 18.75px !important;
+        height: 18.75px !important;
+      }
+
+      .resume_project_pingjiabang {
+        width: 35.625px !important;
+        height: 18.75px !important;
+      }
+
+      .resume_project_title {
+        font-size: 6px !important;
+      }
+
+      .resume_project_time {
+        margin-top: 1.875px !important;
+        font-size: 5.25px !important;
+      }
+
+      .resume_project_text {
+        margin-top: 5.625px !important;
+        font-size: 5.25px !important;
+      }
+    }
+
+    .resume_project_demo {
+      height: 18.75px !important;
+      line-height: 18.75px !important;
+      border-bottom-right-radius: 1.125px !important;
+      border-bottom-left-radius: 1.125px !important;
+      font-size: 6px !important;
+    }
+  }
+
+  .resume_project_m {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .resume_company {
+    padding: 0 10px;
+
+    .resume_company_maykis {
+      width: 93.75px !important;
+      height: 30px !important;
+      margin-right: 11.25px !important;
+    }
+
+    .resume_company_content {
+      .resume_company_time {
+        font-size: 5.25px !important;
+      }
+
+      .resume_company_title {
+        font-size: 6px !important;
+        margin-bottom: 3.75px !important;
+      }
+
+      .resume_company_text {
+        font-size: 5.25px !important;
+      }
+    }
+  }
+
+  .resume_connection_icon {
+    width: 37.5px !important;
+    height: 37.5px !important;
+    border-radius: 50% !important;
+  }
+
+  .resume_connection_title,
+  .resume_connection_text {
+    font-size: 5.25px !important;
+  }
+
+  .resume_connection_title {
+    margin: 3.75px 0 !important;
+  }
+
+  .resume_share {
+    margin: 3.75px 0 !important;
+
+    .resume_share_qq,
+    .resume_share_wechat,
+    .resume_share_twitter,
+    .resume_share_facebook {
+      width: 18.75px !important;
+      height: 18.75px !important;
+    }
+  }
+}
